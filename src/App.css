@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+}
+
+#drum-machine {
+  height: 350px;
+  flex: 0 0 700px;
+  background-color: #212121;
+  border-radius: 5px;
+  border: 7px solid #0D7377;
+  display: flex;
+}
+
+#drum-set-wrapper {
+  height: 100%;
+  width: 55%;
+  padding: 20px;
+}
+
+#drum-set {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 5px;
+}
+
+.drum-pad, .drum-pad:active {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #0D7377;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: 2px white outset;
+  border-bottom: 2px white outset;
+}
+
+#controllers {
+  height: 100%;
+  width: 45%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+#display {
+  width: 75%;
+  height: 50px;
+  background-color: #111111;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.7rem;
+}
+
+#bank, #power {
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#on-off {
+  width: 50px;
+  height: 20px;
+  margin: 5px auto;
+  border: 3px solid #111111;
+  cursor: pointer;
+}
+
+#bank-selector {
+  width: 30px;
+  height: 25px;
+  background-color: #111111;
+  margin: 5px auto;
+  border: 3px solid #111111;
+  cursor: pointer;
+}
+
+#volume {
+  width: 90%;
+  height: 50px;
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+}
