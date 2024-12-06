@@ -58,7 +58,7 @@ function DrumSet({ handleClick, bank, volume }) {
     <ul id="drum-set">
       {bank.map((drumpad, index) => {
         return (
-          <li className="drumpad-list" key={drumpad.key}>
+          <li className="drumpad-list" key={drumpad.name}>
             <DrumPad
               index={index}
               handleClick={handleClick}
@@ -109,11 +109,7 @@ function DrumPad({ index, handleClick, bank, volume, name }) {
         }}
       >
         {name}
-        <audio
-          className="clip"
-          src={bank[index].source}
-          id={name}
-        ></audio>
+        <audio className="clip" src={bank[index].source} id={name}></audio>
       </button>
     </>
   );
