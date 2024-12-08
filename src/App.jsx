@@ -26,7 +26,7 @@ export default function App() {
   }
 
   function handleClick(e) {
-    setClicked(bank[e.target.innerText].name);
+    setClicked(bank[e.target.id].name);
   }
 
   function handleVolume(e) {
@@ -88,7 +88,7 @@ function DrumPad({ index, handleClick, bank, volume, name }) {
     <>
       <button
         className="drum-pad"
-        id={name + "input"}
+        id={index}
         onClick={(e) => {
           handleClick(e);
           let currentAudio = document.getElementById(name);
