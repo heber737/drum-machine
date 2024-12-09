@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Display from "./Display.jsx";
-import Power from "./Power.jsc";
+import Power from "./Power.jsx";
 import Bank from "./Bank.jsx";
 import Volume from "./Volume.jsx";
 
