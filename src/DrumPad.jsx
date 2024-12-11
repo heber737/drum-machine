@@ -3,9 +3,8 @@ import { useRef } from "react";
 
 export default function DrumPad({
   index,
-  onClick,
+  onDrumPadClick,
   bank,
-  volume,
   name,
   clickedPad,
   pressedKey,
@@ -20,20 +19,7 @@ export default function DrumPad({
         className="drum-pad"
         id={index}
         onClick={(e) => {
-          onClick(e);
-          if (
-            currentAudio.current.paused == false &&
-            currentAudio.current.currentTime > 0
-          ) {
-            currentAudio.current.src = "";
-            currentAudio.current.src = bank[index].source;
-          }
-          currentAudio.current.volume = volume;
-          currentAudio.current.play();
-          e.target.style.backgroundColor = "white";
-          setTimeout(() => {
-            e.target.style.backgroundColor = "#0D7377";
-          }, 150);
+          onDrumPadClick(e, currentAudio, index);
         }}
       >
         {name}

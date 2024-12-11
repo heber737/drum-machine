@@ -27,8 +27,21 @@ export default function App() {
     }
   }
 
-  function handleClick(e) {
+  function handleDrumPadClick(e, audioFile, index) {
     setClicked(bank[e.target.id].name);
+    if (
+      audioFile.current.paused == false &&
+      audioFile.current.currentTime > 0
+    ) {
+      audioFile.current.src = "";
+      audioFile.current.src = bank[index].source;
+    }
+    audioFile.current.volume = volume;
+    audioFile.current.play();
+    e.target.style.backgroundColor = "white";
+    setTimeout(() => {
+      e.target.style.backgroundColor = "#0D7377";
+    }, 150);
   }
 
   function handleVolumeChange(e) {
@@ -38,7 +51,7 @@ export default function App() {
   return (
     <div id="drum-machine">
       <div id="drum-set-wrapper">
-        <DrumSet onClick={handleClick} bank={bank} volume={volume} />
+        <DrumSet onDrumPadClick={handleDrumPadClick} bank={bank} />
       </div>
       <div id="controllers">
         <Controllers

@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import DrumPad from "./DrumPad.jsx";
 
-export default function DrumSet({ onClick, bank, volume }) {
+export default function DrumSet({ onDrumPadClick, bank }) {
   const clickedPad = useRef({});
   const acceptedKeys = Array.from(bank, (x) => x.key);
 
@@ -33,9 +33,8 @@ export default function DrumSet({ onClick, bank, volume }) {
             <DrumPad
               pressedKey={drumpad.key}
               index={index}
-              onClick={onClick}
+              onDrumPadClick={onDrumPadClick}
               bank={bank}
-              volume={volume}
               name={drumpad.name}
               clickedPad={clickedPad}
             />
