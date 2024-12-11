@@ -8,10 +8,14 @@ export default function DrumPad({
   name,
   clickedPad,
   pressedKey,
+  power,
 }) {
   const currentAudio = useRef(null);
   const currentButton = useRef(null);
+
+  // clickedPad ref is mutated instead of using state to avoid re-renders of the DrumSet component
   clickedPad[pressedKey] = currentButton;
+
   return (
     <>
       <button
@@ -19,7 +23,9 @@ export default function DrumPad({
         className="drum-pad"
         id={index}
         onClick={(e) => {
-          onDrumPadClick(e, currentAudio, index);
+          if (power) {
+            onDrumPadClick(e, currentAudio, index);
+          }
         }}
       >
         {name}

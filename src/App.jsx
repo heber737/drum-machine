@@ -51,7 +51,7 @@ export default function App() {
   return (
     <div id="drum-machine">
       <div id="drum-set-wrapper">
-        <DrumSet onDrumPadClick={handleDrumPadClick} bank={bank} />
+        <DrumSet onDrumPadClick={handleDrumPadClick} bank={bank} power={power} />
       </div>
       <div id="controllers">
         <Controllers
