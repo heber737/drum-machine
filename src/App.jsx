@@ -19,7 +19,7 @@ export default function App() {
     }
   }
 
-  function toogleBank() {
+  function handleToogleBank() {
     if (bank === bankOne) {
       setBank(bankTwo);
     } else {
@@ -31,24 +31,24 @@ export default function App() {
     setClicked(bank[e.target.id].name);
   }
 
-  function handleVolume(e) {
+  function handleVolumeChange(e) {
     setVolume(e.target.value);
   }
 
   return (
     <div id="drum-machine">
       <div id="drum-set-wrapper">
-        <DrumSet handleClick={handleClick} bank={bank} volume={volume} />
+        <DrumSet onClick={handleClick} bank={bank} volume={volume} />
       </div>
       <div id="controllers">
         <Controllers
           power={power}
           onTooglePower={handleTooglePower}
           bank={bank}
-          toogleBank={toogleBank}
+          onToogleBank={handleToogleBank}
           clicked={clicked}
           volume={volume}
-          handleVolume={handleVolume}
+          onVolumeChange={handleVolumeChange}
         />
       </div>
     </div>

@@ -8,17 +8,17 @@ export default function Controllers({
   power,
   onTooglePower,
   bank,
-  toogleBank,
+  onToogleBank,
   clicked,
   volume,
-  handleVolume,
+  onVolumeChange,
 }) {
   return (
     <>
       <Display clicked={clicked} />
       <Power power={power} onTooglePower={onTooglePower} />
-      <Bank bank={bank} toogleBank={toogleBank} />
-      <Volume volume={volume} handleVolume={handleVolume} />
+      <Bank bank={bank} onToogleBank={onToogleBank} />
+      <Volume volume={volume} onVolumeChange={onVolumeChange} />
     </>
   );
 }
