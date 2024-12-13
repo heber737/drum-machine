@@ -33,7 +33,6 @@ export default function App() {
       audioFile.current.paused == false &&
       audioFile.current.currentTime > 0
     ) {
-      audioFile.current.src = "";
       audioFile.current.src = bank[index].source;
     }
     audioFile.current.volume = volume;

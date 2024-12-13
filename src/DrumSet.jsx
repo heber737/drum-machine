@@ -6,7 +6,7 @@ export default function DrumSet({ onDrumPadClick, bank, power }) {
 
   const clickedPad = useRef({});
   const acceptedKeys = Array.from(bank, (x) => x.key);
-  console.log("i did rerender")
+
   useEffect(() => {
     document.addEventListener("keydown", (e) => {
       const pressedKey = e.code.slice(3);
