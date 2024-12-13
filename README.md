@@ -34,4 +34,4 @@ This project was created by [Heber Villalobos](https://github.com/heber737).
 
 ## License
 
-This software is being released under a [MIT license](https://github.com/heber737/drum-machine/blob/main/LICENSE.md).
+This software is being released under a [MIT license](https://github.com/heber737/drum-machine/blob/master/LICENSE.md).
